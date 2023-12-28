@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Kovalenko lb2</title>
+        <style>
+            img {
+                float: right;
+                margin-left: 10px;
+            }
+
+            .wikipedia-link {
+                position: fixed;
+                bottom: 40px;
+                left: 40px;
+                filter: drop-shadow(0 0 10px #333);
+            }
+
+            .accordion {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .accordion-item {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+
+            .accordion-header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                cursor: pointer;
+                display: flex;
+            }
+
+            .accordion-content {
+                display: none;
+                padding: 10px;
+            }
+
+            .accordion-item input {
+                display: none;
+            }
+
+            .accordion-item input:checked + .accordion-header {
+                background-color: #555;
+            }
+
+            .accordion-item input:checked + .accordion-header + .accordion-content {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center">Лабораторна робота №2</h1>
+            <h2 style="text-align: center">Каскадні таблиці стилів</h2>
+            <h3 style="text-align: center">Стаття Про Німеччину</h3>
+        </header>
+        <main class="container">
+            <nav>
+                <a href="#text1">Визначні місця</a>
+                <a href="#text2">Культура</a>
+                <a href="#text3">Кухня</a>
+                <a href="#text4">Мова</a>
+            </nav>
+            <a
+                class="wikipedia-link"
+                href="https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D1%96%D1%8F:%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0_%D0%9D%D1%96%D0%BC%D0%B5%D1%87%D1%87%D0%B8%D0%BD%D0%B8"
+                target="_blank"
+            >
+                <img src="./icon.png" alt="Wikipedia Icon" width="64">
+            </a>
+            <section>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <input type="checkbox" id="section1">
+                        <label id="text1" class="accordion-header" for="section1">Визначні місця</label>
+                        <div class="accordion-content">
+                            <h3>Рейхстаг</h3>
+                            <img style="width: 300px" src="./rstag.jpg" alt="Рейхстаг">
+                            <p>
+                                Будівля Національних зборів. У довжину ця монументальна споруда становить 137 метрів, а в
+                                ширину – 103 метра. Побудовано в стилі італійського відродження в 1894 році. Чотири вежі
+                                будівлі символізують німецькі королівства. Їх висота – 46 метрів. На вершину скляного
+                                купола можна піднятися, звідти відкривається вид на урядовий квартал і на саме місто.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="section2">
+                        <label id="text2" class="accordion-header" for="section2">Культура</label>
+                        <div class="accordion-content">
+                            <p>
+                                Німеччина — країна з багатою і різноманітною культурною спадщиною, яка відзначається своєю
+                                історією, традиціями та внеском у світову культуру. Культурний ландшафт Німеччини
+                                відображається в її літературі, музиці, мистецтві, архітектурі та фольклорі.
+                            </p>
+                            <p>
+                                Літературна спадщина Німеччини налічує численних великих письменників, серед яких Йоганн
+                                Вольфганг фон Гете, Фрідріх Шиллер, Томас Манн, Франц Кафка та інші. Творчість цих авторів
+                                внесла вагомий вклад у світову літературу і стала важливою частиною німецької культурної
+                                спадщини.
+                            </p>
+                            <img style="width: 170px" src="./bach.jpg" alt="Bach">
+                            <p>
+                                Музика також відіграє важливу роль у німецькій культурі. Країна відома своєю класичною
+                                музикою, зокрема творчістю великих композиторів, таких як Йоганн Себастьян Бах, Людвіг ван
+                                Бетховен та Вольфганг Амадей Моцарт. Крім того, Німеччина внесла значний вклад у розвиток
+                                сучасних музичних жанрів, таких як техно та електронна музика.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="section3">
+                        <label id="text3" class="accordion-header" for="section3">Кухня</label>
+                        <div class="accordion-content">
+                            <img style="width: 250px" src="./wurst.jpg" alt="wurst">
+                            <p>
+                                Національним символом німецької кухні є відома ковбаса (Wurst). Це справжнє мистецтво в
+                                Німеччині, і кожен регіон славиться своєю власною версією ковбаси. Наприклад,
+                                франкфуртська ковбаса (Frankfurter Wurst) відома своєю дрібненькою формою, тоді як
+                                турингенська ковбаса (Thüringer Rostbratwurst) має виразний смак і аромат.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <input type="checkbox" id="section4">
+                        <label id="text4" class="accordion-header" for="section4">Мова</label>
+                        <div class="accordion-content">
+                            <p>
+                                Німецька мова - це одна з найпоширеніших та впливових мов у світі. Вона належить до
+                                германської групи і є офіційною мовою Німеччини, Австрії та Швейцарії, а також однією з
+                                офіційних мов Люксембургу та Ліхтенштейну. Загалом, німецькою мовою розмовляють понад 90
+                                мільйонів людей по всьому світу.
+                            </p>
+                            <img style="width: 260px" src="./deutsch.jpg" alt="deutsch">
+                            <p>
+                                Однією з особливостей німецької мови є її граматична структура та система відмінювання
+                                слів. Іменники, прикметники та займенники можуть змінюватися за відмінками, числами та
+                                родами, що робить мову виразною та точною. Крім того, існує велика кількість словникового
+                                запасу, що робить німецьку мову дуже різноманітною і збагаченою.
+                            </p>
+                            <p>
+                                Німецька відома своєю точністю та точністю виразу, що особливо важливо у наукових та
+                                технічних галузях. Багато видатних філософів, вчених та композиторів в історії вели свої
+                                твори саме на німецькій мові. Праці Фрідріха Ніцше, Іммануїла Канта, Альберта Ейнштейна та
+                                інших великих думкодавців були написані мовою Гете та Шиллера.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
